@@ -1,0 +1,34 @@
+# HTML 속성 vs DOM 프로퍼티
+    원문 : https://jakearchibald.com/2024/attributes-vs-properties/
+
+    ## 차이점 
+        1. HTML 직렬화(serialisation)
+            * 직렬화? 객체나 데이터 구조를 네트워크나 저장소 (배열 버퍼 또는 파일 형식)을 통한 전송에 적합한 형식으로 변환하는 과정
+            ex. JS에서 JSON.stringify()를 통해 객체를 JSON 문자열로 "직렬화" 할 수 있음
+            - attribute : 직렬화 가능, 따라서 브라우저의 개발자 도구의 요소에서는 attribute만 볼 수 있음
+            - property : 직렬화 불가능
+        
+        2. 값(value)의 타입
+            - attribute : 속성값은 항상 문자열 <- 직렬화하기 위함
+            - property : 모든 타입 사용 가능
+
+        3. 대소문자 구분 (case sensitivity)
+            - attribute : 이름은 구분 없음, 그러나 값은 구분이 있다?! = case-insensitive name
+            - property : 구분 가능 = case-sensitive name
+
+            ### attribute의 이름은 대소문자 구분이 있지만 값은 구분이 없다!
+                - 프로퍼티는 attribute를 반영한다
+                - 프로퍼티를 설정하면 attribute가 업데이트 되며, 프로퍼티를 읽는다는 것은 속성을 읽는다는 것과 동일하다
+
+        아 무슨 말인지 모르겠다... 한국말로 이해가 안돼서 원문을 봤는데 거기도 설명이 이상한 느낌...
+
+
+
+
+
+
+
+    
+    ## 추가 참고 사이트
+    - attribute와 property의 차이
+        https://inpa.tistory.com/entry/%F0%9F%8C%90-attribute-property-%EC%B0%A8%EC%9D%B4
